@@ -1,0 +1,252 @@
+JFDML JFormDesigner: "7.0.2.6.321" Java: "11.0.8" encoding: "UTF-8"
+
+new FormModel {
+	contentType: "form/swing"
+	root: new FormRoot {
+		add( new FormWindow( "javax.swing.JFrame", new FormLayoutManager( class info.clearthought.layout.TableLayout ) {
+			"$columnSpecs": "pref, pref, pref, pref, pref, pref, pref, pref"
+			"$rowSpecs": "pref, pref, pref, pref, pref, pref, pref, pref, pref, pref, pref, pref, pref, pref, pref"
+			"hGap": 5
+			"vGap": 5
+		} ) {
+			name: "this"
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "addUser3"
+				"text": "THÊM MỚI"
+				auxiliary() {
+					"JavaCodeGenerator.variableName": "addUser"
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridX": 3
+				"gridWidth": 2
+				"gridY": 1
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label1"
+				"text": "ID"
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridX": 2
+				"gridY": 2
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "textID"
+				auxiliary() {
+					"JavaCodeGenerator.variableName": "textID"
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridX": 3
+				"gridY": 2
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label2"
+				"text": "Mã sinh viên "
+				auxiliary() {
+					"JavaCodeGenerator.variableName": "mssv"
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridY": 3
+				"gridX": 2
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "code"
+				auxiliary() {
+					"JavaCodeGenerator.variableName": "textCode"
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridX": 3
+				"gridY": 3
+				"gridWidth": 4
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label3"
+				"text": "Tên sinh viên "
+				auxiliary() {
+					"JavaCodeGenerator.variableName": "name"
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridY": 4
+				"gridX": 2
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "name"
+				auxiliary() {
+					"JavaCodeGenerator.variableName": "textName"
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridX": 3
+				"gridY": 4
+				"gridWidth": 4
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label4"
+				"text": "Giới tính "
+				auxiliary() {
+					"JavaCodeGenerator.variableName": "gender"
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridY": 5
+				"gridX": 2
+			} )
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "radioNam"
+				"text": "Nam"
+				"$buttonGroup": new FormReference( "buttonGroup1" )
+				auxiliary() {
+					"JavaCodeGenerator.variableName": "radioName"
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridX": 3
+				"gridY": 5
+			} )
+			add( new FormComponent( "javax.swing.JRadioButton" ) {
+				name: "radioNu"
+				"text": "Nữ"
+				"$buttonGroup": new FormReference( "buttonGroup1" )
+				auxiliary() {
+					"JavaCodeGenerator.variableName": "radioNu"
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridX": 4
+				"gridY": 5
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label5"
+				"text": "Số điện thoại "
+				auxiliary() {
+					"JavaCodeGenerator.variableName": "phone"
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridY": 6
+				"gridX": 2
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "phone"
+				auxiliary() {
+					"JavaCodeGenerator.variableName": "textPhone"
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridX": 3
+				"gridY": 6
+				"gridWidth": 4
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label6"
+				"text": "Email "
+				auxiliary() {
+					"JavaCodeGenerator.variableName": "email"
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridY": 7
+				"gridX": 2
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "email"
+				auxiliary() {
+					"JavaCodeGenerator.variableName": "textEmail"
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridX": 3
+				"gridY": 7
+				"gridWidth": 4
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label7"
+				"text": "Lớp "
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridY": 8
+				"gridX": 2
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "comboBox4"
+				"model": new javax.swing.DefaultComboBoxModel {
+					selectedItem: "C0720i1"
+					addElement( "C0720i1" )
+					addElement( "C0720i2" )
+					addElement( "C0520h1" )
+					addElement( "C0520h2" )
+				}
+				auxiliary() {
+					"JavaCodeGenerator.variableName": "Classs"
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridX": 3
+				"gridY": 8
+				"gridWidth": 2
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label8"
+				"text": "Chuyên ngành "
+				auxiliary() {
+					"JavaCodeGenerator.variableName": "major"
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridY": 9
+				"gridX": 2
+			} )
+			add( new FormComponent( "javax.swing.JComboBox" ) {
+				name: "major"
+				"model": new javax.swing.DefaultComboBoxModel {
+					selectedItem: "Java"
+					addElement( "Java" )
+					addElement( "PHP" )
+				}
+				auxiliary() {
+					"JavaCodeGenerator.variableName": "Major1"
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridX": 3
+				"gridY": 9
+				"gridWidth": 2
+			} )
+			add( new FormComponent( "javax.swing.JLabel" ) {
+				name: "label9"
+				"text": "Điểm"
+				auxiliary() {
+					"JavaCodeGenerator.variableName": "address"
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridY": 10
+				"gridX": 2
+			} )
+			add( new FormComponent( "javax.swing.JTextField" ) {
+				name: "Score"
+				auxiliary() {
+					"JavaCodeGenerator.variableName": "Scoretext"
+				}
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridX": 3
+				"gridY": 10
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "addButton1"
+				"text": "Thêm"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addButton1ActionPerformed", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridX": 2
+				"gridY": 11
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "backButton"
+				"text": "Back"
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "backButtonActionPerformed", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
+				"gridX": 5
+				"gridY": 11
+			} )
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 70, 0 )
+			"size": new java.awt.Dimension( 410, 440 )
+		} )
+		add( new FormComponent( "javax.swing.JTextPane" ) {
+			name: "textPane1"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 600, 165 )
+			"size": new java.awt.Dimension( 2, 17 )
+		} )
+		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
+			name: "buttonGroup1"
+		}, new FormLayoutConstraints( null ) {
+			"location": new java.awt.Point( 0, 431 )
+		} )
+	}
+}
