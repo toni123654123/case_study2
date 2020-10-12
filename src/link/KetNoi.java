@@ -13,7 +13,7 @@ public class KetNoi {
     public List<User> getAllUsers() {
         List<User> users = new ArrayList<>();
         Connection connection = LienKet.getJDBC();
-        String sql = "SELECT * FROM user ";
+        String sql = "SELECT * FROM user  ";
         PreparedStatement preparedStatement;
 
         try {
@@ -89,8 +89,9 @@ public class KetNoi {
 
             int rs = preparedStatement.executeUpdate();
             System.out.println(rs);
-        } catch (SQLException throwables) {
-            throwables.printStackTrace();
+        } catch (SQLException exception) {
+//            JOptionPane.showMessageDialog(ListUserForm.this, "ID đã tồn tại", "lỗi", JOptionPane.ERROR_MESSAGE);
+            System.out.println("ID đã tồn tại");
         }
 
     }
@@ -133,5 +134,96 @@ public class KetNoi {
             throwables.printStackTrace();
         }
     }
+    public List<User> getSortScore() {
+        List<User> users = new ArrayList<>();
+        Connection connection = LienKet.getJDBC();
+        String sql = "SELECT * FROM user ORDER BY SCORE DESC";
+        PreparedStatement preparedStatement;
+
+        try {
+            preparedStatement = connection.prepareStatement(sql);
+            ResultSet rs = preparedStatement.executeQuery();
+            
+            while (rs.next()) {
+                User user = new User();
+                user.setId(rs.getInt("ID"));
+                user.setCode(rs.getString("CODE"));
+                user.setName(rs.getString("NAME"));
+                user.setGender(rs.getString("GENDER"));
+                user.setPhone(rs.getInt("PHONE"));
+                user.setEmail(rs.getString("EMAIL"));
+                user.setClasss(rs.getString("CLASS"));
+                user.setMajor(rs.getString("MAJOR"));
+                user.setScore(rs.getInt("SCORE"));
+
+                users.add(user);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+
+
+        return users;
+    }
+    public List<User> getSortClasss() {
+        List<User> users = new ArrayList<>();
+        Connection connection = LienKet.getJDBC();
+        String sql = "SELECT * FROM user ORDER BY CLASS ASC ";
+        PreparedStatement preparedStatement;
+
+        try {
+            preparedStatement = connection.prepareStatement(sql);
+            ResultSet rs = preparedStatement.executeQuery();
+
+            while (rs.next()) {
+                User user = new User();
+                user.setId(rs.getInt("ID"));
+                user.setCode(rs.getString("CODE"));
+                user.setName(rs.getString("NAME"));
+                user.setGender(rs.getString("GENDER"));
+                user.setPhone(rs.getInt("PHONE"));
+                user.setEmail(rs.getString("EMAIL"));
+                user.setClasss(rs.getString("CLASS"));
+                user.setMajor(rs.getString("MAJOR"));
+                user.setScore(rs.getInt("SCORE"));
+
+                users.add(user);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return users;
+    }
+    public List<User> searchUser(){
+        List<User> users = new ArrayList<>();
+        Connection connection = LienKet.getJDBC();
+        String sql = "SELECT ID, CODE, NAME, GENDER, PHONE, EMAIL, CLASS, MAJOR, SCORE FROM user WHERE NAME LIKE ('%' + ? + '%')";
+        PreparedStatement preparedStatement;
+        try {
+            preparedStatement = connection.prepareStatement(sql);
+            ResultSet rs = preparedStatement.executeQuery();
+
+            while (rs.next()) {
+                User user = new User();
+                user.setId(rs.getInt("ID"));
+                user.setCode(rs.getString("CODE"));
+                user.setName(rs.getString("NAME"));
+                user.setGender(rs.getString("GENDER"));
+                user.setPhone(rs.getInt("PHONE"));
+                user.setEmail(rs.getString("EMAIL"));
+                user.setClasss(rs.getString("CLASS"));
+                user.setMajor(rs.getString("MAJOR"));
+                user.setScore(rs.getInt("SCORE"));
+
+                users.add(user);
+            }
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return users;
+    }
+
+
 
 }
+

@@ -21,6 +21,9 @@ import java.util.List;
 public class ListUserForm extends JFrame {
     UserService userService;
     DefaultTableModel defaultTableModel;
+    User user;
+
+
 
     public ListUserForm() {
         initComponents();
@@ -89,7 +92,7 @@ public class ListUserForm extends JFrame {
     }
 
     private void editUserActionPerformed(ActionEvent e) {
-        // TODO add your code here
+
         int row = userTable.getSelectedRow();
 
         if (row == -1) {
@@ -103,6 +106,31 @@ public class ListUserForm extends JFrame {
 
     }
 
+    private void StackScoreActionPerformed(ActionEvent e) {
+
+        defaultTableModel.setRowCount(0);
+        setData(userService.getSortScore());
+
+    }
+
+    private void buttonSortActionPerformed(ActionEvent e) {
+
+        defaultTableModel.setRowCount(0);
+        setData(userService.getSortClass());
+    }
+
+    private void buttonSeachActionPerformed(ActionEvent e) {
+        user = new User();
+        user.setName(textSeach.getText());
+
+//        new ListUserForm().setVisible(true);
+//        this.dispose();
+
+        defaultTableModel.setRowCount(0);
+        setData(userService.searchUser());
+
+    }
+
 
     private void initComponents() {
         // JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
@@ -113,8 +141,10 @@ public class ListUserForm extends JFrame {
         refreshForm = new JButton();
         Deletebutton = new JButton();
         editUserForm = new JButton();
-        button2 = new JButton();
-        textField1 = new JTextField();
+        buttonSeach = new JButton();
+        textSeach = new JTextField();
+        StackScore = new JButton();
+        buttonSort = new JButton();
 
         //======== this ========
         Container contentPane = getContentPane();
@@ -124,7 +154,7 @@ public class ListUserForm extends JFrame {
         addUser.setText("Th\u00eam");
         addUser.addActionListener(e -> addBotionActionPerformed(e));
         contentPane.add(addUser);
-        addUser.setBounds(new Rectangle(new Point(0, 35), addUser.getPreferredSize()));
+        addUser.setBounds(new Rectangle(new Point(0, 20), addUser.getPreferredSize()));
 
         //======== scrollPane1 ========
         {
@@ -135,32 +165,45 @@ public class ListUserForm extends JFrame {
             scrollPane1.setViewportView(userTable);
         }
         contentPane.add(scrollPane1);
-        scrollPane1.setBounds(0, 105, 755, 240);
+        scrollPane1.setBounds(0, 105, 755, 165);
 
         //---- refreshForm ----
         refreshForm.setText("Refresh");
         refreshForm.addActionListener(e -> RefresbuttonActionPerformed(e));
         contentPane.add(refreshForm);
-        refreshForm.setBounds(new Rectangle(new Point(345, 35), refreshForm.getPreferredSize()));
+        refreshForm.setBounds(new Rectangle(new Point(340, 20), refreshForm.getPreferredSize()));
 
         //---- Deletebutton ----
         Deletebutton.setText("Xo\u00e1");
         Deletebutton.addActionListener(e -> DeletebuttonActionPerformed(e));
         contentPane.add(Deletebutton);
-        Deletebutton.setBounds(new Rectangle(new Point(225, 35), Deletebutton.getPreferredSize()));
+        Deletebutton.setBounds(new Rectangle(new Point(225, 20), Deletebutton.getPreferredSize()));
 
         //---- editUserForm ----
         editUserForm.setText("S\u1eeda");
         editUserForm.addActionListener(e -> editUserActionPerformed(e));
         contentPane.add(editUserForm);
-        editUserForm.setBounds(new Rectangle(new Point(110, 35), editUserForm.getPreferredSize()));
+        editUserForm.setBounds(new Rectangle(new Point(110, 20), editUserForm.getPreferredSize()));
 
-        //---- button2 ----
-        button2.setText("T\u00ecm ki\u1ebfm");
-        contentPane.add(button2);
-        button2.setBounds(new Rectangle(new Point(670, 65), button2.getPreferredSize()));
-        contentPane.add(textField1);
-        textField1.setBounds(530, 65, 140, 27);
+        //---- buttonSeach ----
+        buttonSeach.setText("T\u00ecm ki\u1ebfm");
+        buttonSeach.addActionListener(e -> buttonSeachActionPerformed(e));
+        contentPane.add(buttonSeach);
+        buttonSeach.setBounds(new Rectangle(new Point(670, 65), buttonSeach.getPreferredSize()));
+        contentPane.add(textSeach);
+        textSeach.setBounds(530, 65, 140, 27);
+
+        //---- StackScore ----
+        StackScore.setText("S\u1eafp x\u1ebfp theo \u0111i\u1ec3m");
+        StackScore.addActionListener(e -> StackScoreActionPerformed(e));
+        contentPane.add(StackScore);
+        StackScore.setBounds(new Rectangle(new Point(625, 280), StackScore.getPreferredSize()));
+
+        //---- buttonSort ----
+        buttonSort.setText("S\u1eafp x\u1ebfp theo l\u1edbp");
+        buttonSort.addActionListener(e -> buttonSortActionPerformed(e));
+        contentPane.add(buttonSort);
+        buttonSort.setBounds(new Rectangle(new Point(470, 280), buttonSort.getPreferredSize()));
 
         {
             // compute preferred size
@@ -198,7 +241,9 @@ public class ListUserForm extends JFrame {
     private JButton refreshForm;
     private JButton Deletebutton;
     private JButton editUserForm;
-    private JButton button2;
-    private JTextField textField1;
+    private JButton buttonSeach;
+    private JTextField textSeach;
+    private JButton StackScore;
+    private JButton buttonSort;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

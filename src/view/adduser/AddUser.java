@@ -36,13 +36,11 @@ public class AddUser extends JFrame {
     private void addButton1ActionPerformed(ActionEvent e) {
         // TODO add your code here
 
-        if (Integer.parseInt(textID.getText()) == user.getId()) {
-            JOptionPane.showMessageDialog(this, "ID đã tồn tại", "lỗi", JOptionPane.ERROR_MESSAGE);
-        } else {
-            user.setId(Integer.parseInt(textID.getText()));
-        }
-
-
+//        if (Integer.parseInt(textID.getText()) == user.getId()) {
+//            JOptionPane.showMessageDialog(this, "ID đã tồn tại", "lỗi", JOptionPane.ERROR_MESSAGE);
+//        } else {
+//            user.setId(Integer.parseInt(textID.getText()));
+//        }
         user.setCode(textCode.getText());
         user.setName(textName.getText());
         user.setPhone(Integer.parseInt(textPhone.getText()));
@@ -181,7 +179,7 @@ public class AddUser extends JFrame {
         contentPane.add(addButton1, new TableLayoutConstraints(2, 11, 2, 11, TableLayoutConstraints.FULL, TableLayoutConstraints.FULL));
 
         //---- backButton ----
-        backButton.setText("Back");
+        backButton.setText("Quay l\u1ea1i");
         backButton.addActionListener(e -> backButtonActionPerformed(e));
         contentPane.add(backButton, new TableLayoutConstraints(5, 11, 5, 11, TableLayoutConstraints.FULL, TableLayoutConstraints.FULL));
         pack();

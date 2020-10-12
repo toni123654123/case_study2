@@ -10,6 +10,15 @@ public class User {
     private String Classs;
     private String major;
     private int score;
+    private String seach;
+
+    public String getSeach() {
+        return seach;
+    }
+
+    public void setSeach(String seach) {
+        this.seach = seach;
+    }
 
     public int getId() {
         return id;

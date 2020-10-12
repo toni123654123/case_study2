@@ -28,5 +28,16 @@ public class UserService {
         ketNoi.updateUser(user);
 
     }
+    public List<User> getSortScore(){
+
+        return ketNoi.getSortScore();
+    }
+    public List<User> getSortClass(){
+
+        return ketNoi.getSortClasss();
+    }
+   public List<User> searchUser(){
+        return ketNoi.searchUser();
+   }
 }
 

@@ -14,7 +14,7 @@ new FormModel {
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "addBotionActionPerformed", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 0
-				"y": 35
+				"y": 20
 			} )
 			add( new FormContainer( "javax.swing.JScrollPane", new FormLayoutManager( class javax.swing.JScrollPane ) ) {
 				name: "scrollPane1"
@@ -30,7 +30,7 @@ new FormModel {
 				"x": 0
 				"y": 105
 				"width": 755
-				"height": 240
+				"height": 165
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "Refreshbutton"
@@ -40,8 +40,8 @@ new FormModel {
 				}
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "RefresbuttonActionPerformed", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
-				"x": 345
-				"y": 35
+				"x": 340
+				"y": 20
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "Deletebutton"
@@ -52,7 +52,7 @@ new FormModel {
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "DeletebuttonActionPerformed", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 225
-				"y": 35
+				"y": 20
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "editUser"
@@ -63,26 +63,56 @@ new FormModel {
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "editUserActionPerformed", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 110
-				"y": 35
+				"y": 20
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button2"
 				"text": "Tìm kiếm"
+				auxiliary() {
+					"JavaCodeGenerator.variableName": "buttonSeach"
+				}
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "buttonSeachActionPerformed", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 670
 				"y": 65
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField1"
+				auxiliary() {
+					"JavaCodeGenerator.variableName": "textSeach"
+				}
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
 				"x": 530
 				"y": 65
 				"width": 140
 				"height": 27
 			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button3"
+				"text": "Sắp xếp theo điểm"
+				auxiliary() {
+					"JavaCodeGenerator.variableName": "StackScore"
+				}
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "StackScoreActionPerformed", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 625
+				"y": 280
+			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button1"
+				"text": "Sắp xếp theo lớp"
+				auxiliary() {
+					"JavaCodeGenerator.variableName": "buttonSort"
+				}
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "buttonSortActionPerformed", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 470
+				"y": 280
+			} )
 		}, new FormLayoutConstraints( null ) {
-			"location": new java.awt.Point( 0, 25 )
+			"location": new java.awt.Point( 5, 30 )
 			"size": new java.awt.Dimension( 770, 375 )
 		} )
 	}
 }
+

@@ -227,26 +227,26 @@ new FormModel {
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "backButton"
-				"text": "Back"
+				"text": "Quay lại"
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "backButtonActionPerformed", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
 				"gridX": 5
 				"gridY": 11
 			} )
 		}, new FormLayoutConstraints( null ) {
-			"location": new java.awt.Point( 70, 0 )
+			"location": new java.awt.Point( 75, 0 )
 			"size": new java.awt.Dimension( 410, 440 )
 		} )
 		add( new FormComponent( "javax.swing.JTextPane" ) {
 			name: "textPane1"
 		}, new FormLayoutConstraints( null ) {
-			"location": new java.awt.Point( 600, 165 )
+			"location": new java.awt.Point( 600, 170 )
 			"size": new java.awt.Dimension( 2, 17 )
 		} )
 		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
 			name: "buttonGroup1"
 		}, new FormLayoutConstraints( null ) {
-			"location": new java.awt.Point( 0, 431 )
+			"location": new java.awt.Point( 0, 436 )
 		} )
 	}
 }

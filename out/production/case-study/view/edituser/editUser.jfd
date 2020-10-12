@@ -29,8 +29,8 @@ new FormModel {
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField1"
-				"editable": false
 				"enabled": false
+				"editable": false
 				auxiliary() {
 					"JavaCodeGenerator.variableName": "textID"
 				}
@@ -218,13 +218,13 @@ new FormModel {
 				"gridY": 13
 			} )
 		}, new FormLayoutConstraints( null ) {
-			"location": new java.awt.Point( 130, 5 )
+			"location": new java.awt.Point( 100, 0 )
 			"size": new java.awt.Dimension( 385, 475 )
 		} )
 		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
 			name: "buttonGroup1"
 		}, new FormLayoutConstraints( null ) {
-			"location": new java.awt.Point( 0, 476 )
+			"location": new java.awt.Point( 0, 506 )
 		} )
 	}
 }

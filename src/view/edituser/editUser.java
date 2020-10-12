@@ -130,8 +130,8 @@ public class editUser extends JFrame {
         contentPane.add(labelID, new TableLayoutConstraints(2, 2, 2, 2, TableLayoutConstraints.FULL, TableLayoutConstraints.FULL));
 
         //---- textID ----
-        textID.setEditable(false);
         textID.setEnabled(false);
+        textID.setEditable(false);
         contentPane.add(textID, new TableLayoutConstraints(3, 2, 3, 2, TableLayoutConstraints.FULL, TableLayoutConstraints.FULL));
 
         //---- label3 ----
