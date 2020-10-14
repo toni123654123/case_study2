@@ -2,23 +2,15 @@ package model;
 
 public class User {
     private int id;
-    private String code;
     private String name;
     private String gender;
     private int phone;
     private String email;
     private String Classs;
     private String major;
-    private int score;
-    private String seach;
+    private double score;
+    private static final String EMAIL_REGEX =   "^[A-Za-z0-9]+[A-Za-z0-9]*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)$";
 
-    public String getSeach() {
-        return seach;
-    }
-
-    public void setSeach(String seach) {
-        this.seach = seach;
-    }
 
     public int getId() {
         return id;
@@ -28,13 +20,7 @@ public class User {
         this.id = id;
     }
 
-    public String getCode() {
-        return code;
-    }
 
-    public void setCode(String code) {
-        this.code = code;
-    }
 
     public String getName() {
         return name;
@@ -84,11 +70,11 @@ public class User {
         this.major = major;
     }
 
-    public int getScore() {
+    public double getScore() {
         return score;
     }
 
-    public void setScore(int score) {
+    public void setScore(double score) {
         this.score = score;
     }
 }

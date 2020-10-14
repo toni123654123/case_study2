@@ -8,6 +8,7 @@ import java.util.List;
 public class UserService {
     private KetNoi ketNoi;
 
+
     public UserService() {
         ketNoi = new KetNoi();
     }
@@ -36,8 +37,13 @@ public class UserService {
 
         return ketNoi.getSortClasss();
     }
-   public List<User> searchUser(){
-        return ketNoi.searchUser();
+   public List<User> searchUser(String name){
+        return ketNoi.searchUser(name);
    }
+    public List<User> getSort3(){
+
+        return ketNoi.getSort3();
+    }
+
 }
 

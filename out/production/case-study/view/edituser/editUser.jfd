@@ -18,49 +18,11 @@ new FormModel {
 				"gridY": 1
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
-				name: "label2"
-				"text": "ID"
-				auxiliary() {
-					"JavaCodeGenerator.variableName": "labelID"
-				}
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
-				"gridX": 2
-				"gridY": 2
-			} )
-			add( new FormComponent( "javax.swing.JTextField" ) {
-				name: "textField1"
-				"enabled": false
-				"editable": false
-				auxiliary() {
-					"JavaCodeGenerator.variableName": "textID"
-				}
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
-				"gridX": 3
-				"gridY": 2
-			} )
-			add( new FormComponent( "javax.swing.JLabel" ) {
-				name: "label3"
-				"text": "Mã sinh viên"
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
-				"gridX": 2
-				"gridY": 3
-			} )
-			add( new FormComponent( "javax.swing.JTextField" ) {
-				name: "textCode"
-				auxiliary() {
-					"JavaCodeGenerator.variableName": "textCode"
-				}
-			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
-				"gridX": 3
-				"gridY": 3
-				"gridWidth": 2
-			} )
-			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label4"
 				"text": "Tên sinh viên"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
 				"gridX": 2
-				"gridY": 4
+				"gridY": 3
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textName"
@@ -69,7 +31,7 @@ new FormModel {
 				}
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
 				"gridX": 3
-				"gridY": 4
+				"gridY": 3
 				"gridWidth": 2
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
@@ -77,7 +39,7 @@ new FormModel {
 				"text": "Giới tính"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
 				"gridX": 2
-				"gridY": 6
+				"gridY": 4
 			} )
 			add( new FormComponent( "javax.swing.JRadioButton" ) {
 				name: "radioButton1"
@@ -88,7 +50,7 @@ new FormModel {
 				}
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
 				"gridX": 3
-				"gridY": 6
+				"gridY": 4
 			} )
 			add( new FormComponent( "javax.swing.JRadioButton" ) {
 				name: "radioButton2"
@@ -99,14 +61,14 @@ new FormModel {
 				}
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
 				"gridX": 4
-				"gridY": 6
+				"gridY": 4
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label6"
 				"text": "Số điện thoại"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
 				"gridX": 2
-				"gridY": 7
+				"gridY": 5
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField4"
@@ -115,7 +77,7 @@ new FormModel {
 				}
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
 				"gridX": 3
-				"gridY": 7
+				"gridY": 5
 				"gridWidth": 2
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
@@ -123,7 +85,7 @@ new FormModel {
 				"text": "Email"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
 				"gridX": 2
-				"gridY": 8
+				"gridY": 6
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField5"
@@ -132,7 +94,7 @@ new FormModel {
 				}
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
 				"gridX": 3
-				"gridY": 8
+				"gridY": 6
 				"gridWidth": 2
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
@@ -140,7 +102,7 @@ new FormModel {
 				"text": "Lớp"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
 				"gridX": 2
-				"gridY": 9
+				"gridY": 7
 			} )
 			add( new FormComponent( "javax.swing.JComboBox" ) {
 				name: "comboBox1"
@@ -156,14 +118,14 @@ new FormModel {
 				}
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
 				"gridX": 3
-				"gridY": 9
+				"gridY": 7
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label9"
 				"text": "Chuyên ngành"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
 				"gridX": 2
-				"gridY": 10
+				"gridY": 8
 			} )
 			add( new FormComponent( "javax.swing.JComboBox" ) {
 				name: "comboBox2"
@@ -177,14 +139,14 @@ new FormModel {
 				}
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
 				"gridX": 3
-				"gridY": 10
+				"gridY": 8
 			} )
 			add( new FormComponent( "javax.swing.JLabel" ) {
 				name: "label10"
 				"text": "Điểm"
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
 				"gridX": 2
-				"gridY": 11
+				"gridY": 9
 			} )
 			add( new FormComponent( "javax.swing.JTextField" ) {
 				name: "textField6"
@@ -193,7 +155,7 @@ new FormModel {
 				}
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
 				"gridX": 3
-				"gridY": 11
+				"gridY": 9
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button1"
@@ -204,7 +166,7 @@ new FormModel {
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "editbutton1ActionPerformed", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
 				"gridX": 3
-				"gridY": 13
+				"gridY": 11
 			} )
 			add( new FormComponent( "javax.swing.JButton" ) {
 				name: "button2"
@@ -215,11 +177,11 @@ new FormModel {
 				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "buttonBackActionPerformed", true ) )
 			}, new FormLayoutConstraints( class com.jformdesigner.runtime.TableConstraints ) {
 				"gridX": 4
-				"gridY": 13
+				"gridY": 11
 			} )
 		}, new FormLayoutConstraints( null ) {
-			"location": new java.awt.Point( 100, 0 )
-			"size": new java.awt.Dimension( 385, 475 )
+			"location": new java.awt.Point( 95, 5 )
+			"size": new java.awt.Dimension( 385, 445 )
 		} )
 		add( new FormNonVisual( "javax.swing.ButtonGroup" ) {
 			name: "buttonGroup1"

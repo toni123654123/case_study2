@@ -38,7 +38,7 @@ public class ListUserForm extends JFrame {
         userTable.setModel(defaultTableModel);
 
         defaultTableModel.addColumn("ID");
-        defaultTableModel.addColumn("MSSV");
+//        defaultTableModel.addColumn("MSSV");
         defaultTableModel.addColumn("Tên");
         defaultTableModel.addColumn("Giới Tính");
         defaultTableModel.addColumn("Điện thoại");
@@ -52,7 +52,7 @@ public class ListUserForm extends JFrame {
 
     private void setData(List<User> users) {
         for (User user : users) {
-            defaultTableModel.addRow(new Object[]{user.getId(), user.getCode(), user.getName(), user.getGender(),
+            defaultTableModel.addRow(new Object[]{user.getId(), user.getName(), user.getGender(),
                     user.getPhone(), user.getEmail(), user.getClasss(), user.getMajor(), user.getScore()});
         }
     }
@@ -106,6 +106,7 @@ public class ListUserForm extends JFrame {
 
     }
 
+
     private void StackScoreActionPerformed(ActionEvent e) {
 
         defaultTableModel.setRowCount(0);
@@ -121,14 +122,17 @@ public class ListUserForm extends JFrame {
 
     private void buttonSeachActionPerformed(ActionEvent e) {
         user = new User();
-        user.setName(textSeach.getText());
-
-//        new ListUserForm().setVisible(true);
-//        this.dispose();
+       user.setName(textSeach.getText());
 
         defaultTableModel.setRowCount(0);
-        setData(userService.searchUser());
+        setData(userService.searchUser(user.getName()));
 
+    }
+
+    private void button3ScoreActionPerformed(ActionEvent e) {
+        // TODO add your code here
+        defaultTableModel.setRowCount(0);
+        setData(userService.getSort3());
     }
 
 
@@ -145,6 +149,7 @@ public class ListUserForm extends JFrame {
         textSeach = new JTextField();
         StackScore = new JButton();
         buttonSort = new JButton();
+        button3Score = new JButton();
 
         //======== this ========
         Container contentPane = getContentPane();
@@ -205,6 +210,12 @@ public class ListUserForm extends JFrame {
         contentPane.add(buttonSort);
         buttonSort.setBounds(new Rectangle(new Point(470, 280), buttonSort.getPreferredSize()));
 
+        //---- button3Score ----
+        button3Score.setText("Top 3 score");
+        button3Score.addActionListener(e -> button3ScoreActionPerformed(e));
+        contentPane.add(button3Score);
+        button3Score.setBounds(new Rectangle(new Point(340, 280), button3Score.getPreferredSize()));
+
         {
             // compute preferred size
             Dimension preferredSize = new Dimension();
@@ -245,5 +256,6 @@ public class ListUserForm extends JFrame {
     private JTextField textSeach;
     private JButton StackScore;
     private JButton buttonSort;
+    private JButton button3Score;
     // JFormDesigner - End of variables declaration  //GEN-END:variables
 }

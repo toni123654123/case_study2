@@ -109,10 +109,20 @@ new FormModel {
 				"x": 470
 				"y": 280
 			} )
+			add( new FormComponent( "javax.swing.JButton" ) {
+				name: "button4"
+				"text": "Top 3 score"
+				auxiliary() {
+					"JavaCodeGenerator.variableName": "button3Score"
+				}
+				addEvent( new FormEvent( "java.awt.event.ActionListener", "actionPerformed", "button3ScoreActionPerformed", true ) )
+			}, new FormLayoutConstraints( class com.jformdesigner.runtime.NullConstraints ) {
+				"x": 340
+				"y": 280
+			} )
 		}, new FormLayoutConstraints( null ) {
 			"location": new java.awt.Point( 5, 30 )
 			"size": new java.awt.Dimension( 770, 375 )
 		} )
 	}
 }
-
